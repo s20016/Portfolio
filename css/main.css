@@ -11,10 +11,10 @@ body {
   font-family: "Raleway", sans-serif;
   background-color: #222831;
   color: #6b80a0;
-  -ms-overflow-style: none;
   scrollbar-width: none;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
+  -ms-overflow-style: none;
 }
 
 body::-webkit-scrollbar {
@@ -36,8 +36,8 @@ nav {
   color: #3c4757;
   text-transform: uppercase;
   font-size: 1.3rem;
+  animation: nav-animation 1200ms cubic-bezier(0.87, -0.12, 1, -0.14) 1;
   -webkit-animation: nav-animation 1200ms cubic-bezier(0.87, -0.12, 1, -0.14) 1;
-          animation: nav-animation 1200ms cubic-bezier(0.87, -0.12, 1, -0.14) 1;
 }
 
 nav a {
@@ -102,8 +102,8 @@ header .h1-one {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
+  animation: fade 250ms ease-in 1;
   -webkit-animation: fade 250ms ease-in 1;
-          animation: fade 250ms ease-in 1;
 }
 
 header .h1-one span {
@@ -115,16 +115,16 @@ header .h1-two {
       -ms-flex-positive: 10;
           flex-grow: 10;
   font-family: "Raleway", sans-serif;
+  animation: fade2 1100ms ease-in 1 forwards;
   -webkit-animation: fade2 1100ms ease-in 1 forwards;
-          animation: fade2 1100ms ease-in 1 forwards;
 }
 
 header .h1-three {
   -webkit-box-flex: 100;
       -ms-flex-positive: 100;
           flex-grow: 100;
+  animation: fade 500ms ease-in 1;
   -webkit-animation: fade 500ms ease-in 1;
-          animation: fade 500ms ease-in 1;
 }
 
 header .h1-three span {
@@ -511,6 +511,9 @@ main footer .accounts ul li a:visited, main footer .accounts ul li a:active {
   .home {
     height: 95vw;
   }
+  .home nav {
+    font-size: .9rem;
+  }
   .home header .h1-two {
     font-size: 16.4vw;
   }
@@ -555,6 +558,7 @@ main footer .accounts ul li a:visited, main footer .accounts ul li a:active {
     gap: 30vw;
   }
   main footer .accounts .dp {
+    margin-bottom: 5rem;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
