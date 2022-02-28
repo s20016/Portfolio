@@ -9,7 +9,9 @@ window.onbeforeunload = function(e) {
 
 const fadingElement = document.querySelectorAll('.fade-in');
 const fadeOption = {
-  rootMargin: " 0px 0px -500px 0px"
+  root: null,
+  // rootMargin: " 0px 0px -500px 0px",
+  threshold: 0.3
 };
 
 const fadeOnScroll = new IntersectionObserver(function(entries, apeparOnScroll) {
