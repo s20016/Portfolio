@@ -1,0 +1,581 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300&family=Noto+Serif+JP:wght@700&family=Raleway:ital,wght@0,300;0,500;0,700;1,400&family=Source+Code+Pro:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: #222831;
+  color: #6b80a0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.home {
+  height: 100vh;
+}
+
+nav {
+  margin: calc(2.4vw + 0.5vw) 2.5vw 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #3c4757;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  -webkit-animation: nav-animation 1200ms cubic-bezier(0.87, -0.12, 1, -0.14) 1;
+          animation: nav-animation 1200ms cubic-bezier(0.87, -0.12, 1, -0.14) 1;
+}
+
+nav a {
+  color: #4b5768;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #6b80a0 !important;
+}
+
+nav a:visited,
+nav a:active {
+  color: #4b5768;
+}
+
+@-webkit-keyframes nav-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes nav-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: "Noto Serif JP", serif;
+  padding: calc(1.2rem + 0.5vw) 2.5vw 0;
+}
+
+header .h1-one,
+header .h1-two,
+header .h1-three {
+  font-weight: 700;
+  font-size: 12.27vw;
+  letter-spacing: -0.7vw;
+  line-height: 1.09;
+  color: #3c4757;
+  text-transform: uppercase;
+}
+
+header .h1-one {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  -webkit-animation: fade 250ms ease-in 1;
+          animation: fade 250ms ease-in 1;
+}
+
+header .h1-one span {
+  font-family: "Raleway", sans-serif;
+}
+
+header .h1-two {
+  -webkit-box-flex: 10;
+      -ms-flex-positive: 10;
+          flex-grow: 10;
+  font-family: "Raleway", sans-serif;
+  -webkit-animation: fade2 1100ms ease-in 1 forwards;
+          animation: fade2 1100ms ease-in 1 forwards;
+}
+
+header .h1-three {
+  -webkit-box-flex: 100;
+      -ms-flex-positive: 100;
+          flex-grow: 100;
+  -webkit-animation: fade 500ms ease-in 1;
+          animation: fade 500ms ease-in 1;
+}
+
+header .h1-three span {
+  font-size: 11vw;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    color: #a4c3ef;
+  }
+}
+
+@keyframes fade2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    color: #a4c3ef;
+  }
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8vw;
+}
+
+main .about-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  min-height: 100vh;
+  max-width: 82%;
+  margin: auto;
+  padding: calc(2vw + 0.5vw) 2.5vw;
+  font-family: "Noto Sans JP", sans-serif;
+  opacity: 0;
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
+  -webkit-transition: opacity 500ms ease-in, -webkit-transform 300ms ease-out;
+  transition: opacity 500ms ease-in, -webkit-transform 300ms ease-out;
+  transition: opacity 500ms ease-in, transform 300ms ease-out;
+  transition: opacity 500ms ease-in, transform 300ms ease-out, -webkit-transform 300ms ease-out;
+}
+
+main .about-section h2 {
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: calc(2rem + 0.5vw);
+  margin: 1vw;
+}
+
+main .about-section .container {
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  -webkit-box-flex: 30%;
+      -ms-flex: 30%;
+          flex: 30%;
+  margin: 1vw;
+}
+
+main .about-section .container h3 {
+  text-align: center;
+  font-weight: 300;
+}
+
+main .about-section .container p {
+  text-align: justify;
+  word-wrap: break-word;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 2;
+  color: #4b5768;
+}
+
+main .skill-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Source Code Pro", monospace;
+  font-size: calc(3em + 0.5vw);
+  height: 100vh;
+  padding: calc(2vw + 0.5vw);
+  color: #3c4757;
+  opacity: 0;
+  -webkit-transition: 500ms opacity ease-in;
+  transition: 500ms opacity ease-in;
+}
+
+main .skill-section table {
+  height: calc(40vw + 0.5vw);
+  width: calc(45vw + 0.5vw);
+  text-align: center;
+  cursor: default;
+}
+
+main .skill-section table .A {
+  -webkit-transition: 500ms 900ms color ease-in;
+  transition: 500ms 900ms color ease-in;
+}
+
+main .skill-section table .B0 {
+  -webkit-transition: color 100ms 1100ms ease-in;
+  transition: color 100ms 1100ms ease-in;
+}
+
+main .skill-section table .B1 {
+  -webkit-transition: color 200ms 1200ms ease-in;
+  transition: color 200ms 1200ms ease-in;
+}
+
+main .skill-section table .B2 {
+  -webkit-transition: color 300ms 1300ms ease-in;
+  transition: color 300ms 1300ms ease-in;
+}
+
+main .skill-section table .B3 {
+  -webkit-transition: color 100ms 1400ms ease-in;
+  transition: color 100ms 1400ms ease-in;
+}
+
+main .skill-section table .B4 {
+  -webkit-transition: color 200ms 1500ms ease-in;
+  transition: color 200ms 1500ms ease-in;
+}
+
+main .skill-section table .B5 {
+  -webkit-transition: color 300ms 1600ms ease-in;
+  transition: color 300ms 1600ms ease-in;
+}
+
+main .skill-section table .B6 {
+  -webkit-transition: color 100ms 1700ms ease-in;
+  transition: color 100ms 1700ms ease-in;
+}
+
+main .skill-section table .B7 {
+  -webkit-transition: color 200ms 1800ms ease-in;
+  transition: color 200ms 1800ms ease-in;
+}
+
+main .skill-section table .B8 {
+  -webkit-transition: color 300ms 1900ms ease-in;
+  transition: color 300ms 1900ms ease-in;
+}
+
+main .skill-section table .B9 {
+  -webkit-transition: color 100ms 2000ms ease-in;
+  transition: color 100ms 2000ms ease-in;
+}
+
+main .projects-section {
+  font-weight: 400;
+  overflow: hidden;
+  padding: calc(2vw + 0.5vw) 2.5vw;
+  text-transform: uppercase;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: 500ms opacity ease-in;
+  transition: 500ms opacity ease-in;
+}
+
+main .projects-section h2 {
+  font-size: calc(2rem + 0.5vw);
+  margin: 2vw 0;
+}
+
+main .projects-section .projects {
+  color: #3c4757;
+  height: 100%;
+}
+
+main .projects-section .projects ul {
+  border-top: 1px solid #3c4757;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .projects-section .projects ul li {
+  position: relative;
+  font-size: 6vw;
+  font-weight: 400;
+  border-top: 1px solid #3c4757;
+  padding: 2vw 0;
+}
+
+main .projects-section .projects ul li a {
+  color: #3c4757 !important;
+}
+
+main .projects-section .projects ul li a:hover {
+  color: #a4c3ef !important;
+  cursor: pointer;
+}
+
+main .projects-section .projects ul li a:visited, main .projects-section .projects ul li a:active {
+  color: #3c4757;
+}
+
+main .projects-section .projects ul li:last-child {
+  border-bottom: 0;
+}
+
+main footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 0 0 1rem;
+  padding: calc(2vw + 0.5vw) 2.5vw;
+  color: #3c4757;
+}
+
+main footer p {
+  color: #4b5768;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+main footer .accounts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: calc(90px + 0.5vw);
+}
+
+main footer .accounts .dp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 1rem;
+}
+
+main footer .accounts .dp p {
+  margin-bottom: 0.6rem;
+}
+
+main footer .accounts .dp img {
+  width: 70%;
+  opacity: 0.9;
+  border-radius: 10px;
+  -webkit-box-shadow: 1rem 1rem #3c4757;
+          box-shadow: 1rem 1rem #3c4757;
+}
+
+main footer .accounts ul li {
+  font-weight: bold;
+  font-size: calc(65px + 0.5vw);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  white-space: normal;
+}
+
+main footer .accounts ul li:hover {
+  color: #a4c3ef !important;
+  text-decoration: underline !important;
+}
+
+main footer .accounts ul li a {
+  color: #3c4757;
+  white-space: nowrap;
+}
+
+main footer .accounts ul li a:hover {
+  color: #a4c3ef !important;
+}
+
+main footer .accounts ul li a:visited, main footer .accounts ul li a:active {
+  color: inherit;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+.fade-in.appear .A {
+  color: #e7de5e;
+}
+
+.fade-in.appear .B1,
+.fade-in.appear .B2,
+.fade-in.appear .B3,
+.fade-in.appear .B4,
+.fade-in.appear .B5,
+.fade-in.appear .B6,
+.fade-in.appear .B7,
+.fade-in.appear .B8,
+.fade-in.appear .B9,
+.fade-in.appear .B0 {
+  color: #6b80a0;
+}
+
+@media screen and (max-width: 768px) {
+  .home {
+    height: 95vw;
+  }
+  .home header .h1-two {
+    font-size: 16.4vw;
+  }
+  main {
+    gap: 16vw;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  main .projects-section .projects ul li {
+    font-size: 4rem;
+  }
+  main .skill-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main .about-section {
+    margin-top: 15vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  main .about-section .container {
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
+  main .about-section .container p {
+    font-size: 0.95rem;
+  }
+  main footer .accounts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 30vw;
+  }
+  main footer .accounts .dp {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main footer .accounts .dp p {
+    font-size: 0.7rem;
+  }
+  main footer .accounts ul li {
+    font-size: 3.2rem;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  header {
+    margin: 3rem 0;
+  }
+  main .skill-section {
+    font-size: calc(2.8em + 0.5vw);
+  }
+}
+/*# sourceMappingURL=main.css.map */
